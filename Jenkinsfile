@@ -13,6 +13,7 @@ pipeline {
             steps {
                 sh 'python3 --version' // verify python3 is available
                 sh 'python3 -m venv venv' // Create a virtual environment
+                sh  'apt install python3.10-venv'
                 // For Windows agents, you might use: bat 'python -m venv venv'
                 // And activate differently: bat 'venv\\Scripts\\activate'
                 sh '. venv/bin/activate && pip install -r requirements.txt' // Activate and install (Linux/macOS)
