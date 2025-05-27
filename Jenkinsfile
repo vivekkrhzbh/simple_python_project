@@ -12,7 +12,7 @@ pipeline {
         stage('Setup Python Environment') { // Stage to set up a virtual environment and install dependencies
             steps {
                 sh 'python3 --version' // verify python3 is available
-                sh 'sudo -S apt install python3.10-venv'
+                //sh 'sudo -S apt install python3.10-venv'
                 sh 'python3 -m venv venv' // Create a virtual environment
                 //sh  'sudo apt install python3.10-venv'
                 // For Windows agents, you might use: bat 'python -m venv venv'
